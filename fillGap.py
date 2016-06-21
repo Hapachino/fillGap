@@ -8,7 +8,7 @@ import os, re, shutil
 # arguments: folder, prefix
 def fillGap(folder, prefix):
 
-  # Create regex with prefix + number + extension
+  # Create regex with prefix + number + extension     # Include another group for leading zero's?
   prefixRegex = re.compile(r'(%s)(\d)+(\.[a-z0-9]+)' % prefix)
 
   # Make sure folder path is absolute
@@ -25,7 +25,7 @@ def fillGap(folder, prefix):
     if not prefixRegex.search(filename):
       fileList.remove(filename)
 
-  # find match with lowest number and remove from list, and store number as variable
+  # find match with lowest number and remove from list, and store number as variable    # Alternatively, start searching from lowest number
   for filename in fileList:
       
   
