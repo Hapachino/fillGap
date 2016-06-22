@@ -7,7 +7,7 @@ import os, re, shutil
 def fillGap(folder, prefix):
 
 	# Create regex with prefix + number + extension     
-	prefixRegex = re.compile(r'(%s)(\d)+(\.[a-z0-9]+)' % prefix)
+	prefixRegex = re.compile(r'(%s)(\d)+(\.[a-zA-Z0-9]+)' % prefix)
 
   	# Make sure folder path is absolute
   	folder = os.path.abspath(folder)
