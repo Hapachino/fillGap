@@ -22,7 +22,7 @@ def fillGap(folder, prefix):
 	Number = 0  
 	while True:
   		for filename in fileList:
-		mo = prefixRegex.searcH(filename)
+		mo = prefixRegex.search(filename)
 			if Number == int(mo.group(2)):
 				fileList.remove(filename)
 				Completed = True
@@ -35,7 +35,7 @@ def fillGap(folder, prefix):
 	nextNumber = Number
   	while True:
   		for filename in fileList:
-			mo = prefixRegex.searcH(filename)
+			mo = prefixRegex.search(filename)
 			if nextNumber == int(mo.group(2)):
 				# New number including prefixed zero's
 				subNumber = '0' * (len(mo.group(2)) - len(Number)) + str(number)
