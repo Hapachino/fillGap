@@ -14,9 +14,9 @@ def fillGap(folder, prefix):
 
   	# Create list with all files that match regex
 	fileList = []
-  	for object in os.listdir(folder):
-  		if os.path.isfile(os.path.join(folder, object)) and prefixRegex.search(object):
-      			fileList.append(object)
+  	for item in os.listdir(folder):
+  		if os.path.isfile(os.path.join(folder, item)) and prefixRegex.search(item):
+      			fileList.append(item)
 
   	# Look for the starting number by incrementing, starting from 0
 	Number = 0  
